@@ -6,10 +6,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const email = require("./server/email");
 
-
-
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
