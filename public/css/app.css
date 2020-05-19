@@ -451,6 +451,24 @@ h2 {
     font-size: 3em;
 }
 
+i.node img,
+i.mongo img,
+i.mysql img {
+    margin-top: -40px;
+    padding-left: 10px;
+}
+
+
+/* i.mongo img {
+    margin-top: -30px;
+    padding-left: 10px;
+}
+
+i.mysql img {
+    margin-top: -30px;
+    padding-left: 10px;
+} */
+
 
 /*proyectos*/
 
