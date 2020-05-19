@@ -11,7 +11,6 @@ html,
 body {
     max-width: 100%;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
 }
 
 body {
@@ -39,6 +38,10 @@ h5 {
     font-display: swap;
 }
 
+h2 {
+    color: #a24d4d;
+}
+
 .titulo-header,
 .texto-header,
 .acerca-de-btn {
@@ -48,10 +51,6 @@ h5 {
 p {
     font-family: "PT Sans";
     text-align: center;
-}
-
-@font-face {
-    font-display: swap;
 }
 
 
@@ -368,7 +367,6 @@ header {
 }
 
 h2 {
-    color: #a24d4d;
     border-radius: 1px solid #574141;
 }
 
@@ -453,28 +451,14 @@ h2 {
 
 i.node img,
 i.mongo img,
-i.mysql img {
+i.mysql img,
+i.firebase img {
     margin-top: -40px;
     padding-left: 10px;
 }
 
 
-/* i.mongo img {
-    margin-top: -30px;
-    padding-left: 10px;
-}
-
-i.mysql img {
-    margin-top: -30px;
-    padding-left: 10px;
-} */
-
-
 /*proyectos*/
-
-h2 {
-    color: #a24d4d;
-}
 
 .card {
     margin-bottom: 40px;
