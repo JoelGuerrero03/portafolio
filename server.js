@@ -5,14 +5,13 @@ const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const email = require("./server/email");
-const compression = require('compression');
+
 
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
-app.use(compression());
 // Express HBS engine
 hbs.registerPartials(__dirname + '/views/parciales');
 app.set('view engine', 'hbs');
@@ -54,23 +53,7 @@ app.post('/api/contacto', function(req, res, next) {
     transporter.enviarCorreo(email);
     res.send("OK");
 });
-// server-sent event stream
-app.get('/events', function(req, res) {
-    res.setHeader('Content-Type', 'text/event-stream')
-    res.setHeader('Cache-Control', 'no-cache')
 
-    // send a ping approx every 2 seconds
-    var timer = setInterval(function() {
-        res.write('data: ping\n\n')
-
-        // !!! this is the important part
-        res.flush()
-    }, 2000)
-
-    res.on('close', function() {
-        clearInterval(timer)
-    })
-})
 
 app.listen(process.env.PORT, () => {
     console.log(`Escuchando peticiones en el puerto`, process.env.PORT)
