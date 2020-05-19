@@ -439,11 +439,6 @@ h2 {
     font-size: 3em;
 }
 
-.firebase {
-    padding-left: 10px;
-    font-size: 3em;
-}
-
 .fa-windows {
     color: #0078d7;
     padding-left: 10px;
@@ -454,24 +449,6 @@ h2 {
     color: #ec1944;
     padding-left: 10px;
     font-size: 3em;
-}
-
-i.node img {
-    padding-left: 10px;
-    margin-top: -20px;
-    width: 5em;
-}
-
-i.mongo img {
-    padding-left: 10px;
-    margin-top: -30px;
-    width: 5em;
-}
-
-i.mysql img {
-    padding-left: 10px;
-    margin-top: -30px;
-    width: 5em;
 }
 
 
