@@ -1,11 +1,11 @@
+require('./config/config');
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
 const email = require("./server/email");
-const port = process.env.PORT || 3000;
+
 
 
 
@@ -54,6 +54,6 @@ app.post('/api/contacto', function(req, res, next) {
     res.send("OK");
 });
 
-app.listen(port, () => {
-    console.log(`Escuchando peticiones en el puerto ${port}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Escuchando peticiones en el puerto`, process.env.PORT)
 });
