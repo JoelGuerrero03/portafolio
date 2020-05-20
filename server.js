@@ -5,7 +5,6 @@ const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const email = require("./server/email");
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
@@ -18,15 +17,12 @@ app.all('/', function(req, res, next) {
     next();
 });
 app.use(cors());
-
 app.get('/', (req, res) => {
     res.render('home');
 });
 app.get('/compatibilidad', (req, res) => {
     res.render('compatibilidad');
 });
-
-
 var transporter = new email({
     "service": "gmail",
     "port": 588,
@@ -53,8 +49,6 @@ app.post('/api/contacto', function(req, res, next) {
     transporter.enviarCorreo(email);
     res.send("OK");
 });
-
-
 app.listen(process.env.PORT, () => {
     console.log(`Escuchando peticiones en el puerto`, process.env.PORT)
 });
