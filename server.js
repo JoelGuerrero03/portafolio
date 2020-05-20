@@ -22,6 +22,9 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.render('home');
 });
+app.get('/compatibilidad', (req, res) => {
+    res.render('compatibilidad');
+});
 
 
 var transporter = new email({
