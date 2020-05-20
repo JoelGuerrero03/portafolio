@@ -140,3 +140,39 @@ a.more-link {
     margin-top: 50px;
     letter-spacing: 1px;
 }
+
+@media (max-width: 743px) {
+    .error-container {
+        font-size: 10em;
+    }
+}
+
+@media (max-width: 644px) {
+    .error-container {
+        font-size: 8em;
+    }
+}
+
+@media (max-width:530px) {
+    .error-container {
+        font-size: 6em;
+    }
+}
+
+@media (max-width:396px) {
+    .error-container {
+        font-size: 5em;
+    }
+}
+
+@media (max-width:326px) {
+    .error-container {
+        font-size: 4.5em;
+    }
+}
+
+@media (max-width:302px) {
+    .error-container {
+        font-size: 4em;
+    }
+}
